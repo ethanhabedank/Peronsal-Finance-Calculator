@@ -1,0 +1,37 @@
+body {
+    border: 3px solid black;
+    margin: 0;
+    padding: 10px;
+    max-height: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container1{
+    height:100% ;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    border: solid 2px purple;
+    justify-content: center;
+}
+
+.container2 {
+    border: 3px solid red;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#text1,#text2,#text3,#text4,#text5,#text6 {
+    width: 97%;
+    
+}

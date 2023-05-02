@@ -1,13 +1,14 @@
-// const paycheck = 396;
 
-const personalSpending = (percent) => {
-  var percent = document.getElementById('text2')
-  var paycheck = document.getElementById('text1').value
- return percent * paycheck
-}
-// const ps = personalSpending(.15)
+var personalSpending = () => {
+  var percent = parseFloat(document.getElementById('text2').value);
+   var paycheck = parseFloat(document.getElementById('text1').value);
+     personalSpendingAmount = (paycheck * percent);
+       document.getElementById('calculatedPS').innerHTML = personalSpendingAmount;
+} 
 
-const whichGasPrice = (gasType) => {
+
+const whichGasPrice = () => {
+  var gasType = document.getElementById('text3').value;
   if (gasType === 'regular'){
     return 3.481
   } else if (gasType === 'mid-grade'){
@@ -18,31 +19,29 @@ const whichGasPrice = (gasType) => {
     return 'Please enter valid gas type'
   }
 }
-const gas = whichGasPrice('regular');
+ 
 
-const gasSpending = (howManyMiles, milesToGallon) => {
-  let gasUsed = howManyMiles / milesToGallon; 
-  return gasUsed * gas;
+const gasSpending = () => {
+  var howManyMiles = parseFloat(document.getElementById('text4').value);
+    var milesToGallon = parseFloat(document.getElementById('text5').value);
+      let gasUsed = howManyMiles / milesToGallon; 
+        let gasSpendingAmount = Math.floor(100 *(gasUsed * whichGasPrice()))/100; 
+          document.getElementById('calculatedGS').innerHTML = gasSpendingAmount;
 }
-const gs = gasSpending(250, 15)
 
-const monthlyInsurance = (cost) => {
-  let month = cost * 12;
-  return month / 52;
+const monthlyInsurance = () => {
+  cost = parseFloat(document.getElementById('text6').value)
+    let month = cost * 12;
+      var monthlyInsuranceSpending = Math.round(100 * month / 52)/100;
+        document.getElementById('calculatedMIS').innerHTML = monthlyInsuranceSpending;
 }
-const mI = monthlyInsurance(69)
 
 const savingsLeft = () =>{
-    const amount = gs + ps + mI;
-    return paycheck - amount;
-}
-// figure out how to calculate time until paycheck when currentDate  is higher than untilDate
-const timeUntil = (currentDate, untilDate) =>{
-  
+    var amount = (personalSpending() + gasSpending() + monthlyInsurance());
+     var paycheck = parseFloat(document.getElementById('text1').value);
+       var savingsLeftAmount = (paycheck - amount); 
+          document.getElementById('calculatedSavings').innerHTML = savingsLeftAmount;
+
 }
 
-console.log(currentDate); 
-console.log(ps)
-console.log(gs)
-console.log(savingsLeft())
-console.log(mI)
+ 

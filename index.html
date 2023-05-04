@@ -1,6 +1,10 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Kanit:wght@700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +18,22 @@
 
      <input type="number" id="text1" placeholder="enter paycheck amount">
         <input type="number" id="text2" placeholder="enter personal spending percent *example .25, .70, .50*">
-            <input type="button" value="Submit" onclick="personalSpending()"> 
+            <input class="btn1" type="button" value="submit" onclick="personalSpending()"> 
 
     <input type="text" id="text3" placeholder="enter what gas you use ('regular', mid-grade or premium)">
         <input type="number" id="text4" placeholder="enter how many miles driven">
             <input type="number" id="text5" placeholder="enter gas mileage">
-                <input type="button" value="Submit" onclick="gasSpending()">
+                <input class="btn2" type="button" value="submit" onclick="gasSpending()">
 
     <input type="text" id="text6" placeholder="enter monthly insurance">
-        <input type="button" value="Submit" onclick="monthlyInsurance();savingsLeft()">
+        <input class="btn3" type="button" value="submit" onclick="monthlyInsurance();savingsLeft()">
 
     </div>
       <div class="container3">
-        <div id="calculatedPS"><p>Personal Spending</p></div> 
-            <div id="calculatedGS">Gas Spending</div>
-                <div id="calculatedMIS">Montly Insurance Spending</div>
-                    <div id="calculatedSavings">Calculated Savings</div>
+        <div id="calculatedPS">,<p>Personal Spending</p></div> 
+            <div id="calculatedGS"><p>Gas Spending</p></div>
+                <div id="calculatedMIS"><p>Montly Insurance Spending</p></div>
+                    <div id="calculatedSavings"><p>Calculated Savings</p></div>
       </div>
 </div>
 </body>

@@ -9,16 +9,19 @@ body {
     align-content: center;
 }
 #text1,#text2,#text3,#text4,#text5,#text6 {
-    width: 97%;
+    width: 93%;
+    background-color: whitesmoke;
+    border: 1px solid #03045e;
+    font-family: Lato;
 }
 
 .container1{
     height:100% ;
-    width: 100%;
+    width: 35%;
     margin: auto;
     padding: 10px;
     display: flex;
-    border: solid 2px purple;
+    
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -26,8 +29,8 @@ body {
 }
 
 .container2 {
-    border: 3px solid red;
-    width: 350px;
+    
+    width: 100%;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -36,18 +39,22 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    box-shadow: -9px 9px 1px #03045e;
+    border: 1px solid black;
+    
 }
 
 .container3 {
-    border: solid 1px black;
-    width: 30%;
+    
+    width: 100%;
     display: flex;
     justify-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 #calculatedPS {
-    border: 3px solid green;
+    
     width: 100px;
     background-image: url(personalSpending.jpg);
     background-position: center;
@@ -58,7 +65,7 @@ body {
 
 
 #calculatedGS {
-    border: 3px solid green;
+    
     width: 100px;
     background-image: url(gassss.jpg);
     background-position: center;
@@ -68,7 +75,7 @@ body {
 }
 
 #calculatedMIS {
-    border: 3px solid green;
+    
     width: 100px;
     background-image: url(monthlyInsurance.jpg);
     background-position: center;
@@ -77,6 +84,30 @@ body {
 }
 
 #calculatedSavings {
-    border: 3px solid green;
+    
     width: 100px;
+}
+
+#calculatedPS, #calculatedGS, #calculatedMIS, #calculatedSavings {
+    border: 1px solid black; 
+    min-width: 80px;
+    max-width: 80px;
+    max-height: 70px;
+    min-height: 70px; 
+    box-shadow:-5px 5px 1px #03045e ;  
+    margin-bottom: 10px;
+    font-family: Lato;
+    display: flex;
+    justify-content:center;
+    align-items: end;
+}
+.btn1, .btn2, .btn3 {
+    background-color: #03045e;
+    color: whitesmoke;
+    border: 1px #848A95;
+    font-family: Lato;
+    font-weight: 700;
+    width: 25%;
+    align-self: center;
+    
 }

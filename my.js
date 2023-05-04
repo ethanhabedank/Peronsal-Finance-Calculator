@@ -36,12 +36,17 @@ const monthlyInsurance = () => {
         document.getElementById('calculatedMIS').innerHTML = monthlyInsuranceSpending;
 }
 
+var ps = personalSpending();
+var gs = gasSpending();
+var mi = monthlyInsurance();
+
+
 const savingsLeft = () =>{
-    var amount = (personalSpending() + gasSpending() + monthlyInsurance());
+    var amount = ps + gs + mi;
      var paycheck = parseFloat(document.getElementById('text1').value);
        var savingsLeftAmount = (paycheck - amount); 
           document.getElementById('calculatedSavings').innerHTML = savingsLeftAmount;
 
 }
 
- 
+

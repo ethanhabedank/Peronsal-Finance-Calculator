@@ -2,8 +2,9 @@
 var personalSpending = () => {
   var percent = parseFloat(document.getElementById('text2').value);
    var paycheck = parseFloat(document.getElementById('text1').value);
-     personalSpendingAmount = (paycheck * percent);
+     personalSpendingAmount = Math.floor(100 *(paycheck * percent))/100;
        document.getElementById('calculatedPS').innerHTML = personalSpendingAmount;
+       return personalSpendingAmount;
 } 
 
 
@@ -27,6 +28,7 @@ const gasSpending = () => {
       let gasUsed = howManyMiles / milesToGallon; 
         let gasSpendingAmount = Math.floor(100 *(gasUsed * whichGasPrice()))/100; 
           document.getElementById('calculatedGS').innerHTML = gasSpendingAmount;
+          return gasSpendingAmount;
 }
 
 const monthlyInsurance = () => {
@@ -34,17 +36,19 @@ const monthlyInsurance = () => {
     let month = cost * 12;
       var monthlyInsuranceSpending = Math.round(100 * month / 52)/100;
         document.getElementById('calculatedMIS').innerHTML = monthlyInsuranceSpending;
+        return monthlyInsuranceSpending;
 }
 
+
+
+
+function savingsLeft(){
 var ps = personalSpending();
 var gs = gasSpending();
 var mi = monthlyInsurance();
-
-
-const savingsLeft = () =>{
     var amount = ps + gs + mi;
      var paycheck = parseFloat(document.getElementById('text1').value);
-       var savingsLeftAmount = (paycheck - amount); 
+       var savingsLeftAmount = paycheck - amount; 
           document.getElementById('calculatedSavings').innerHTML = savingsLeftAmount;
 
 }
